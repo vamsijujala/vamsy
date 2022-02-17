@@ -1,0 +1,56 @@
+<%- include("partials/header.ejs") -%>
+
+<div class="event">
+    <div class="event-title">
+        <h1>T20 World Cup 2020-21</h1>
+        <h2>INDIA VS AUSTRALIA</h2>
+    </div>
+    <div class="event-body">
+        <div class="event-body-div">
+            <p class="event-body-country">IND:</p>
+            <div class="event-body-score-div">
+                <div class="event-body-score flextype" >
+                    <p class="score">0</p>
+                    <p>/</p>
+                    <p class="wicket">0</p>
+                </div>
+                <div class="flextype">
+                    <p class="batsman1">Player</p>
+                    <p> *</p>
+                </div>
+                <p class="batsman2 flextype">Player</p>
+            </div>
+        </div>
+        <div class = "vertical"></div>
+        <div class="event-body-div">
+            <p class="event-body-country">AUS:</p>
+            <div class="event-body-score-div">
+                <div class="event-body-score-div-sub">
+                    <p class="event-body-score overs">0 </p>
+                    <p>Overs</p>
+                </div>
+                <div class="flextype">
+                    <p class="bowler">Player</p>
+                    <p> *</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var message = document.getElementById('message');
+        const socket = io('http://3.70.206.132:30012');
+        
+        socket.on("connection");
+        socket.on('message', (data)=>{
+            console.log(typeof(data),data);
+            document.querySelector('.score').innerHTML = data.score;
+            document.querySelector('.wicket').innerHTML = data.wicket;
+            document.querySelector('.batsman1').innerHTML = data.batsman1;
+            document.querySelector('.batsman2').innerHTML = data.batsman2;
+            document.querySelector('.overs').innerHTML = data.overs;
+            document.querySelector('.bowler').innerHTML = data.bowler;
+        })
+    </script>
+</div>
+    
+<%- include("partials/footer.ejs") -%>

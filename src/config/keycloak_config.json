@@ -1,0 +1,13 @@
+{
+  "realm": "HomeConnect",
+  "auth-server-url": "https://3.70.206.132:31016/auth/",
+  "ssl-required": "external",
+  "resource": "live-score-client",
+  "verify-token-audience": true,
+  "credentials": {
+    "secret": "57d419f7-51a3-4e95-885d-833810a1d5b7"
+  },
+  "use-resource-role-mappings": true,
+  "confidential-port": 0,
+  "policy-enforcer": {}
+}

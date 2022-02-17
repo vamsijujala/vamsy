@@ -1,0 +1,9 @@
+{
+  "CLIENT_ID": "LiveScore1",
+  "BROKER_IP": "100.68.25.121:9092",
+  "TOPIC": "Score1",
+  "NUM_PARTITION": 1,
+  "GROUP_ID": "test",
+  "FROM_START": true
+}
+

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: live-score-client-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: live-score-client
+  template:
+    metadata:
+      labels:
+        name: live-score-client
+    spec:
+      nodeSelector:
+        app: live-score-poc
+      containers:
+      - name: live-score-client
+        image: k2sujith/live-score-client:latest

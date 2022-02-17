@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs") -%>
+
+<div class="umpire">
+    <div class="umpire-details">
+        <h1>Live Scores Umpire!</h1>
+        <div class = "line"></div>
+        <form class="umpire-form" action="/umpire" method='POST' >
+            <label for="score">Current Score: </label>
+            <input type="text" name="score" id="score"> <br>
+            <label for="wicket">Wickets: </label>
+            <input type="text" name="wicket" id="wicket"><br>
+            <label for="batsman1">Current Batsman: </label>
+            <input type="text" name="batsman1" id="batsman1"><br>
+            <label for="batsman2">Batsman 2: </label>
+            <input type="text" name="batsman2" id="batsman2"><br>
+            <label for="overs">Overs: </label>
+            <input type="text" name="overs" id="overs"><br>
+            <label for="bowler">Bowler: </label>
+            <input type="text" name="bowler" id="bowler"><br>
+            <button type="submit"onclick="AlertPopup()" >Submit</button>
+        </form>
+    </div>
+    <script>
+        function AlertPopup(){
+            alert("Conform Data Submit!!!");
+        }
+    </script>
+</div>
+    
+<%- include("partials/footer.ejs") -%>
