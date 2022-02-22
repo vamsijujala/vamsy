@@ -5,7 +5,7 @@ pipeline{
         stage("Cloning git"){
             steps{
             
-               git branch: 'main', credentialsId: 'git', url: 'https://github.com/susrutap/POC.git'
+               git credentialsId: '90d46145-f642-48e5-aef3-6f5646b4961b', url: 'https://github.com/vamsijujala/vamsy.git'
         }
         }      
         stage("Docker Build"){
